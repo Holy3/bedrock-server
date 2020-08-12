@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 # Minecraft bedrock version
-ARG SRV_Version=latest
+ARG SRV_Version=1.16.20.03
 
 # Environment variables
 ENV VERSION=$SRV_Version
