@@ -21,7 +21,7 @@ RUN apt-get -yqq update && \
 # Download and extract the bedrock server
 RUN if [ "$VERSION" = "latest" ] ; then \
         LATEST_VERSION=$( \
-            curl -s https://www.minecraft.net/en-us/download/server/bedrock/ 2>&1 | \
+            curl -s https://www.minecraft.net/en-us/download/server/bedrock 2>&1 | \
             grep -o 'https://minecraft.azureedge.net/bin-linux/[^"]*' | \
             sed 's#.*/bedrock-server-##' | sed 's/.zip//') && \
         export VERSION=$LATEST_VERSION && \
